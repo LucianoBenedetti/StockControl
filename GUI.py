@@ -10,6 +10,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -21,14 +22,6 @@ class Ui_MainWindow(object):
         self.gBox_STOCK_DAY.setEnabled(True)
         self.gBox_STOCK_DAY.setGeometry(QtCore.QRect(0, 0, 701, 631))
         self.gBox_STOCK_DAY.setObjectName("gBox_STOCK_DAY")
-        self.scrollArea_FileList = QtWidgets.QScrollArea(self.gBox_STOCK_DAY)
-        self.scrollArea_FileList.setGeometry(QtCore.QRect(30, 30, 321, 561))
-        self.scrollArea_FileList.setWidgetResizable(True)
-        self.scrollArea_FileList.setObjectName("scrollArea_FileList")
-        self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 319, 559))
-        self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
-        self.scrollArea_FileList.setWidget(self.scrollAreaWidgetContents)
         self.btn_Start_Stock_Day = QtWidgets.QPushButton(self.gBox_STOCK_DAY)
         self.btn_Start_Stock_Day.setGeometry(QtCore.QRect(380, 30, 301, 121))
         self.btn_Start_Stock_Day.setObjectName("btn_Start_Stock_Day")
@@ -38,25 +31,28 @@ class Ui_MainWindow(object):
         self.btn_delete_Files = QtWidgets.QPushButton(self.gBox_STOCK_DAY)
         self.btn_delete_Files.setGeometry(QtCore.QRect(380, 390, 301, 121))
         self.btn_delete_Files.setObjectName("btn_delete_Files")
-        self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox.setGeometry(QtCore.QRect(750, 0, 731, 921))
-        self.groupBox.setObjectName("groupBox")
-        self.btn_TRUCK_DAY = QtWidgets.QPushButton(self.groupBox)
+        self.list_FileList = QtWidgets.QListWidget(self.gBox_STOCK_DAY)
+        self.list_FileList.setGeometry(QtCore.QRect(20, 30, 331, 581))
+        self.list_FileList.setObjectName("list_FileList")
+        self.gBox_TRUCKDAY = QtWidgets.QGroupBox(self.centralwidget)
+        self.gBox_TRUCKDAY.setGeometry(QtCore.QRect(750, 0, 731, 921))
+        self.gBox_TRUCKDAY.setObjectName("gBox_TRUCKDAY")
+        self.btn_TRUCK_DAY = QtWidgets.QPushButton(self.gBox_TRUCKDAY)
         self.btn_TRUCK_DAY.setGeometry(QtCore.QRect(20, 30, 301, 121))
         self.btn_TRUCK_DAY.setObjectName("btn_TRUCK_DAY")
-        self.btn_EXPIRED_DATES = QtWidgets.QPushButton(self.groupBox)
+        self.btn_EXPIRED_DATES = QtWidgets.QPushButton(self.gBox_TRUCKDAY)
         self.btn_EXPIRED_DATES.setGeometry(QtCore.QRect(400, 30, 301, 121))
         self.btn_EXPIRED_DATES.setObjectName("btn_EXPIRED_DATES")
-        self.calendarWidget = QtWidgets.QCalendarWidget(self.groupBox)
+        self.calendarWidget = QtWidgets.QCalendarWidget(self.gBox_TRUCKDAY)
         self.calendarWidget.setGeometry(QtCore.QRect(10, 180, 711, 711))
         self.calendarWidget.setObjectName("calendarWidget")
-        self.groupBox_2 = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox_2.setGeometry(QtCore.QRect(10, 690, 721, 221))
-        self.groupBox_2.setObjectName("groupBox_2")
-        self.btn_ADD_ITEM = QtWidgets.QPushButton(self.groupBox_2)
+        self.gBox_DATABASE = QtWidgets.QGroupBox(self.centralwidget)
+        self.gBox_DATABASE.setGeometry(QtCore.QRect(10, 690, 721, 221))
+        self.gBox_DATABASE.setObjectName("gBox_DATABASE")
+        self.btn_ADD_ITEM = QtWidgets.QPushButton(self.gBox_DATABASE)
         self.btn_ADD_ITEM.setGeometry(QtCore.QRect(20, 50, 301, 131))
         self.btn_ADD_ITEM.setObjectName("btn_ADD_ITEM")
-        self.btn_CHECK_ITEM = QtWidgets.QPushButton(self.groupBox_2)
+        self.btn_CHECK_ITEM = QtWidgets.QPushButton(self.gBox_DATABASE)
         self.btn_CHECK_ITEM.setGeometry(QtCore.QRect(390, 50, 291, 131))
         self.btn_CHECK_ITEM.setObjectName("btn_CHECK_ITEM")
         MainWindow.setCentralWidget(self.centralwidget)
@@ -78,13 +74,12 @@ class Ui_MainWindow(object):
         self.btn_Start_Stock_Day.setText(_translate("MainWindow", "STOCK DAY"))
         self.btn_COUNT_STOCK.setText(_translate("MainWindow", "COUNT STOCK"))
         self.btn_delete_Files.setText(_translate("MainWindow", "Delete Files"))
-        self.groupBox.setTitle(_translate("MainWindow", "TRUCK DAY"))
+        self.gBox_TRUCKDAY.setTitle(_translate("MainWindow", "TRUCK DAY"))
         self.btn_TRUCK_DAY.setText(_translate("MainWindow", "TRUCK DAY"))
         self.btn_EXPIRED_DATES.setText(_translate("MainWindow", "EXIPRED DATES"))
-        self.groupBox_2.setTitle(_translate("MainWindow", "DATA BASE"))
+        self.gBox_DATABASE.setTitle(_translate("MainWindow", "DATA BASE"))
         self.btn_ADD_ITEM.setText(_translate("MainWindow", "ADD ITEM"))
         self.btn_CHECK_ITEM.setText(_translate("MainWindow", "CHECK ITEM"))
-    
 
 
 if __name__ == "__main__":
@@ -95,8 +90,3 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-
-
-
-
-

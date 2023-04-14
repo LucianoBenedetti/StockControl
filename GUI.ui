@@ -32,29 +32,6 @@
     <property name="title">
      <string>STOCK DAY</string>
     </property>
-    <widget class="QScrollArea" name="scrollArea_FileList">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>30</y>
-       <width>321</width>
-       <height>561</height>
-      </rect>
-     </property>
-     <property name="widgetResizable">
-      <bool>true</bool>
-     </property>
-     <widget class="QWidget" name="scrollAreaWidgetContents">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>319</width>
-        <height>559</height>
-       </rect>
-      </property>
-     </widget>
-    </widget>
     <widget class="QPushButton" name="btn_Start_Stock_Day">
      <property name="geometry">
       <rect>
@@ -94,8 +71,18 @@
       <string>Delete Files</string>
      </property>
     </widget>
+    <widget class="QListWidget" name="list_FileList">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>331</width>
+       <height>581</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
-   <widget class="QGroupBox" name="groupBox">
+   <widget class="QGroupBox" name="gBox_TRUCKDAY">
     <property name="geometry">
      <rect>
       <x>750</x>
@@ -144,7 +131,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QGroupBox" name="groupBox_2">
+   <widget class="QGroupBox" name="gBox_DATABASE">
     <property name="geometry">
      <rect>
       <x>10</x>

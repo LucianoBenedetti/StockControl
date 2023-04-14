@@ -2,14 +2,13 @@ import pyperclip as pc
 import pandas as pd
 import threading
 
-End_main = False
+
 
 def SaveDataBase():
     dataBase.to_csv('DataBase.DB', header=True, index=False)
     #print("\nSe guardo")
-    if End_main == False:
-        event = threading.Timer(20, SaveDataBase)    #Autosave de DataBase
-        event.start()
+    event = threading.Timer(20, SaveDataBase)    #Autosave de DataBase
+    event.start()
 
 
 
@@ -60,5 +59,12 @@ try:
 except KeyboardInterrupt:           #Si preciono CTRL + C salgo y guardo base de datos
     pass
     print("\n \n END OF PROGRAM ")
-    End_main = True
+    #cancelo evento timer
+    threads= threading.enumerate()
+    for thr in threads:
+        try:
+            thr.cancel()
+        except:
+            pass
+
     dataBase.to_csv('DataBase.DB', header=True, index=False)
