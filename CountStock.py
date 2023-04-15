@@ -122,6 +122,3 @@ writer.book.move_sheet(writer.book["TOTAL"],-writer.book.index(writer.book["TOTA
 writer.book.remove( writer.book["Sheet"])
 
 writer.close()        
-
-
-

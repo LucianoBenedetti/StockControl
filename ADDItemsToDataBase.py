@@ -59,6 +59,7 @@ try:
 except KeyboardInterrupt:           #Si preciono CTRL + C salgo y guardo base de datos
     pass
     print("\n \n END OF PROGRAM ")
+    dataBase.to_csv('DataBase.DB', header=True, index=False)
     #cancelo evento timer
     threads= threading.enumerate()
     for thr in threads:
@@ -66,5 +67,3 @@ except KeyboardInterrupt:           #Si preciono CTRL + C salgo y guardo base de
             thr.cancel()
         except:
             pass
-
-    dataBase.to_csv('DataBase.DB', header=True, index=False)
