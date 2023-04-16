@@ -88,11 +88,11 @@
       <x>750</x>
       <y>0</y>
       <width>731</width>
-      <height>921</height>
+      <height>961</height>
      </rect>
     </property>
     <property name="title">
-     <string>TRUCK DAY</string>
+     <string>EXPIRED DATES</string>
     </property>
     <widget class="QPushButton" name="btn_TRUCK_DAY">
      <property name="geometry">
@@ -126,8 +126,21 @@
        <x>10</x>
        <y>180</y>
        <width>711</width>
-       <height>711</height>
+       <height>641</height>
       </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_Calendary">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>840</y>
+       <width>711</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </widget>
